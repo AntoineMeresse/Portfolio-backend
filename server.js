@@ -46,6 +46,30 @@ app.post("/projects", (req, res) => {
     });
 });
 
+app.get("/skillcards", (req , res) => {
+    SkillCards.find( (err, data) => {
+        if(err) {
+            res.status(500).send(err);
+        }
+        else {
+            res.status(200).send(data);
+        }
+    });
+});
+
+app.post("/skillcards", (req, res) => {
+    const dbSkillCards = req.body;
+
+    SkillCards.create(dbSkillCards, (err, data) => {
+        if(err) {
+            res.status(500).send(err);
+        }
+        else {
+            res.status(201).send(data);
+        }
+    });
+});
+
 // Listener
 
 app.listen(port, () => (console.log(`Server started on port : ${port}`)));
