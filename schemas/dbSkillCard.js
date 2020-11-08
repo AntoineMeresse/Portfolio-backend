@@ -6,7 +6,7 @@ const skillCarSchema = moongose.Schema(
             type : String,
             required : true,
         },
-        url : { 
+        liste : { 
             type : Array,
             required : true,
         },
