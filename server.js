@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import {connection_url} from "./database.js";
 import Projects from "./schemas/dbProjects.js";
+import SkillCards from "./schemas/dbSkillCard.js";
 
 // App Config
 const app = express();
