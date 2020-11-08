@@ -10,7 +10,7 @@ const port = 3000 || process.env.PORT;
 // Middlewares
 
 // DB config
-//mongoose.connect("mongodb://");
+mongoose.connect(connection_url, { useNewUrlParser: true });
 
 // API Endpoints
 app.get("/", (req, res) => res.status(200).send("Heyyy !"));
