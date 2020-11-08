@@ -6,3 +6,5 @@ const projectsSchema = moongose.Schema(
         url : String
     }
 );
+
+export default moongose.model('projects', projectsSchema);
