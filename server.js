@@ -2,7 +2,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import {connection_url} from "./database.js";
-import Projects from "./dbProjects.js";
+import Projects from "./schemas/dbProjects.js";
 
 // App Config
 const app = express();
