@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import {connection_url} from "./database.js";
 import Projects from "./schemas/dbProjects.js";
 import SkillCards from "./schemas/dbSkillCard.js";
+import cors from 'cors';
 
 // App Config
 const app = express();
@@ -11,6 +12,7 @@ const port = 3000 || process.env.PORT;
 
 // Middlewares
 app.use(express.json());
+app.use(cors());
 
 // DB config
 mongoose.connect(connection_url, { 
