@@ -4,11 +4,11 @@ const projectsSchema = moongose.Schema(
     {
         name : {
             type : String,
-            requited : true,
+            required : true,
         },
         url : { 
             type : String,
-            required : false
+            required : false,
         },
         technos : {
             type : Array,
